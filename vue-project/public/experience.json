@@ -1,0 +1,72 @@
+[
+  {
+    "id": "10",
+    "category": "edu",
+    "exp": "Frontend-utvecklare",
+    "place": "IT-Högskolan, Stockholm",
+    "year": "2022-2024"
+  },
+  {
+    "id": "9",
+    "category": "work",
+    "exp": "Skolbibliotek",
+    "place": "Årstadalsskolan, Stockholms stad",
+    "year": "2022-2023"
+  },
+  {
+    "id": "8",
+    "category": "work",
+    "exp": "Lärare, årskurs F-6",
+    "place": "Årstadalsskolan, Stockholms stad",
+    "year": "2016-2022"
+  },
+  {
+    "id": "7",
+    "category": "work",
+    "exp": "Lärare, årskurs F-3",
+    "place": "Källbrinksskolan, Huddinge kommun",
+    "year": "2012-2016"
+  },
+  {
+    "id": "6",
+    "category": "work",
+    "exp": "Förskollärare",
+    "place": "Kajen, Stockholms stad",
+    "year": "2011-2012"
+  },
+  {
+    "id": "5",
+    "category": "edu",
+    "exp": "Lärarutbildning",
+    "place": "Linköpings universitet",
+    "year": "2007-2011"
+  },
+  {
+    "id": "4",
+    "category": "edu",
+    "exp": "Pedagogik, kurs",
+    "place": "Linköpings universitet",
+    "year": "2007"
+  },
+  {
+    "id": "3",
+    "category": "edu",
+    "exp": "Juridisk översiktskurs",
+    "place": "Stockholms universitet",
+    "year": "2006"
+  },
+  {
+    "id": "2",
+    "category": "work",
+    "exp": "Lagerarbete",
+    "place": "ICA Flygfyren",
+    "year": "2006"
+  },
+  {
+    "id": "1",
+    "category": "edu",
+    "exp": "Media: grafisk kommunikation",
+    "place": "NTI-gymnasiet",
+    "year": "2003-2006"
+  }
+]
