@@ -1,7 +1,7 @@
 <template>
   <div id="grid-container">
     <div id="grid1">
-      <h2 class="about-title">Experience</h2>
+      <h2 class="page-title">Experience</h2>
     </div>
 
     <div id="grid2">
@@ -46,8 +46,10 @@
         <li>Agil utveckling</li>
         <li>Fullstackutveckling (React)</li>
         <li>
-          <RouterLink to="/code">
-            <ion-icon name="code-slash-outline" id="codeIcon"></ion-icon>
+          <RouterLink to="/experience/code">
+            <ion-icon name="code-slash-outline" id="codeIcon"
+              ><MyCode></MyCode
+            ></ion-icon>
           </RouterLink>
         </li>
         <li></li>
@@ -69,6 +71,7 @@
 
     <div class="grid4">Experience</div>
   </div> -->
+  <router-view></router-view>
 </template>
 
 <style>
@@ -78,11 +81,16 @@ body {
 /* @media (min-width: 1024px) { */
 #grid-container {
   display: grid;
+  padding-left: 2vw;
   grid-template-rows: 25vh auto auto;
   grid-template-columns: 40vw 30vw;
   grid-template-areas:
     "grid1 grid2"
     "grid3 grid4";
+}
+
+.page-title {
+  font-size: 4em;
 }
 @media (max-width: 900px) {
   #grid-container {

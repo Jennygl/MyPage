@@ -1,5 +1,7 @@
 <!-- Bootstrap code slide -->
+
 <template>
+
   <div class="grid-container-code">
     <div class="grid1"><h2>Code</h2></div>
 

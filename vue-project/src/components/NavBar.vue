@@ -3,7 +3,7 @@ import { RouterLink } from "vue-router";
 </script>
 
 <template>
-  <div class="greetings">
+  <diV class="greetings">
     <header>
       <div class="about">
         <h1 id="h-jenny">Jenny</h1>
@@ -13,7 +13,7 @@ import { RouterLink } from "vue-router";
         <ul>
           <li>
             <h2>
-              <RouterLink to="/education" @click="scrollToTitle"
+              <RouterLink to="/experience" @click="scrollToTitle"
                 >Experience</RouterLink
               >
             </h2>
@@ -34,7 +34,7 @@ import { RouterLink } from "vue-router";
       </nav>
       <div ref="scrollToHere"></div>
     </header>
-  </div>
+  </diV>
 </template>
 
 <style scoped>
@@ -48,6 +48,7 @@ header {
   display: flex;
   width: 100vw;
   justify-content: flex-start;
+  align-items: center;
   height: fit-content;
   min-height: 90vh;
   top: 0%;
@@ -61,10 +62,12 @@ header {
 }
 
 .about {
-  justify-content: flex-start;
+  justify-content: center;
+  text-align: left;
   width: 50vw;
   left: 6vw;
   top: 30vh;
+  padding-left: 2vw;
 }
 
 h3 {
@@ -91,6 +94,7 @@ ul {
 a:link {
   text-decoration: none;
   color: rgb(40, 40, 40);
+  font-size: 4em;
 }
 a:visited {
   text-decoration: none;

@@ -1,5 +1,5 @@
 <template>
-    <p>How would you like to contact me?</p>
+  <p>How would you like to contact me?</p>
   <select class="wayofcontact" v-model="selected">
     <option
       v-for="option in options"
@@ -23,15 +23,24 @@
 <script>
 export default {
   el: "#app",
-  data: function () {
+  data() {
     return {
       selected: "",
       options: [
         { text: "Call me", value: "0768535812" },
-        { text: "Visit me on LinkedIn", value: "LinkedIn" },
+        {
+          text: "Visit me on LinkedIn",
+          value:
+            "window.location.href = https://www.linkedin.com/in/jenny-grinde-lensing-243ba7231/",
+        },
         { text: "Use the awesome form", value: "Form over there ->" },
       ],
     };
+  },
+  watch: {
+    selected(newVal, oldVal) {
+      console.log(newVal, oldVal);
+    },
   },
 };
 //  <img class="jennyImg" src="../assets/jenny1.jpg" alt="Jenny" />

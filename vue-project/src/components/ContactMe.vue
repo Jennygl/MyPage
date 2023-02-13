@@ -6,7 +6,7 @@ import SubmitButton from "./SubmitButton.vue";
 <template>
   <div id="grid-container-contact">
     <div id="gridHeader">
-      <h2 class="contact-title">Contact</h2>
+      <h2 class="page-title">Contact</h2>
     </div>
 
     <div id="gridEmpty"></div>
@@ -16,7 +16,7 @@ import SubmitButton from "./SubmitButton.vue";
     </div>
     <!-- Jag behövde peppa mig själv lite :) -->
     <div id="grid4">
-      <p>Berätta för potentiella arbetsgivare hur fantastisk Jenny är!</p>
+      <p>Tell pontential employers how amazing Jenny is.!</p>
       <p>Your name</p>
       <input type="text" label="Your email" v-model="newName" />
       <p>Your message</p>
@@ -27,12 +27,12 @@ import SubmitButton from "./SubmitButton.vue";
         class="sendButton"
         @click="soAwesome"
         type="button"
-        value="Berätta"
+        value="Tell them"
       ></SubmitButton>
       <p>Here it is:</p>
 
       <p>
-        <span>{{ initials }} säger: </span>{{ awesome }}
+        <span>{{ initials }} says: </span>{{ awesome }}
       </p>
     </div>
   </div>
@@ -42,6 +42,7 @@ import SubmitButton from "./SubmitButton.vue";
 /* @media (min-width: 1024px) { */
 #grid-container-contact {
   display: grid;
+  padding-left: 2vw;
   grid-template-rows: 25vh auto;
   grid-template-columns: 40vw 40vw;
   grid-template-areas:

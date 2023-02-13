@@ -3,9 +3,9 @@
 <template>
   <div class="grid-container">
     <div class="grid1">
-      <h1 class="about-title">
+      <h2 class="page-title">
         Jenny <span id="lastName">Grinde Lensing</span>
-      </h1>
+      </h2>
     </div>
     <div class="grid2">
       <img class="jennyImg" src="../assets/jenny1.jpg" alt="Jenny" />
@@ -37,6 +37,9 @@ body {
   border-radius: 50%;
   height: 40vh;
 }
+.page-title {
+  font-size: 4em;
+}
 
 #lastName {
   font-style: italic;
@@ -45,18 +48,18 @@ body {
 
 .grid-container {
   display: grid;
+  grid-template-rows: 25vh auto;
   grid-template-columns: 70vw 30vw;
-  grid-template-rows: 40vh 30vh;
   grid-template-areas:
     "grid1 grid2"
     "grid3 grid4";
-  padding: 2vw;
+  padding-left: 2vw;
 }
 
 .grid1 {
   display: grid;
   grid-area: grid1;
-  align-self: center;
+  /* align-self: center; */
 }
 .grid2 {
   display: grid;
@@ -81,7 +84,7 @@ export default {
     return {
       experiences: [],
       edu: [],
-      filteredData: [],
+      //   filteredData: [],
     };
   },
   mounted() {
