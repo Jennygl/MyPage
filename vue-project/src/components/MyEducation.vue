@@ -4,18 +4,12 @@
       <h2 class="page-title">Experience</h2>
     </div>
 
-    <div id="grid2">
-      <!-- <li v-for="experience in experiences" :key="experience.id">
-        <router-link :to="`/${experience.id}`"><h2></h2>{{
-          experience.exp
-        }}</router-link>
-      </li> -->
-    </div>
-
+    <div id="grid2"></div>
+    <!-- Använder resultat från axios -->
     <div id="grid3">
       <ul v-for="experience in experiences" :key="experience.id">
         <li>
-          <h4>{{ experience.exp }}</h4>
+          <h3>{{ experience.exp }}</h3>
           <button v-on:click="show = !show" value="experience.id">
             <ion-icon
               name="chevron-down-outline"
@@ -25,7 +19,8 @@
           </button>
           <transition name="fade">
             <span v-if="show">
-              {{ experience.place }}, {{ experience.year }}
+              {{ experience.place }}
+              , {{ experience.year }}
             </span></transition
           >
         </li>
@@ -35,18 +30,21 @@
     <div id="grid4">
       <ul id="courses">
         <li>
-          <h3>
-            Innan min LIA börjar kommer jag att ha genomfört följande kurser:
-          </h3>
+          <!-- Adressparameter -->
+          <router-link to="/exp/Courses"
+            ><h3>
+              Innan min LIA börjar kommer jag att ha genomfört följande kurser:
+            </h3></router-link
+          >
         </li>
         <li>HTML & CSS</li>
-        <li>Native Javascript (med bland annat API-hantering)</li>
-        <li>UX- & UI-design (Figma, WCAG)</li>
-        <li>Javascript med ramverk (Vue)</li>
+        <li>Native Javascript</li>
+        <li>UX- & UI-design</li>
+        <li>Javascript med ramverk</li>
         <li>Agil utveckling</li>
-        <li>Fullstackutveckling (React)</li>
+        <li>Fullstackutveckling</li>
         <li>
-          <RouterLink to="/experience/code">
+          <RouterLink to="/code">
             <ion-icon name="code-slash-outline" id="codeIcon"
               ><MyCode></MyCode
             ></ion-icon>
@@ -57,20 +55,6 @@
     </div>
   </div>
 
-  <!-- <div class="grid-container">
-    <div class="grid1">Experience</div>
-    <div class="grid2">Experience</div>
-
-    <div class="grid3" v-for="experience in experiences" :key="experience.id">
-      <div class="card" style="width: 18rem">
-        <h3 class="card-title" @click="moreInfo">{{ experience.exp }}</h3>
-
-        <p class="card-text">{{ experience.place }}, {{ experience.year }}</p>
-      </div>
-    </div>
-
-    <div class="grid4">Experience</div>
-  </div> -->
   <router-view></router-view>
 </template>
 
@@ -127,7 +111,8 @@ body {
   grid-area: grid5;
 }
 #codeIcon {
-  font-size: 2em;
+  font-size: 1.5em;
+  color: blue;
 }
 /* More info button */
 button {
@@ -145,6 +130,23 @@ li {
 
 #courses {
   color: blue;
+}
+
+a:link {
+  text-decoration: none;
+  color: rgb(40, 40, 40);
+  font-size: 1.5em;
+}
+a:visited {
+  text-decoration: none;
+  color: rgb(40, 40, 40);
+}
+a:hover {
+  text-decoration: none;
+  font-style: italic;
+}
+a:active {
+  text-decoration: none;
 }
 
 .title {
@@ -178,19 +180,4 @@ export default {
       .then((response) => (this.experiences = response.data));
   },
 };
-
-// axios
-//   .get("experience.json")
-//   .then((response) => {
-//     const filteredData = response.data.filter(
-//       (item) => item.category === "edu"
-//     );
-//     return filteredData
-//     // console.log(filteredData);
-//   })
-//   .catch((error) => {
-//     console.error(error);
-//   });
-
-//?filter[$and][][name]=Iphone&filter[$and][][name]=Samsung
 </script>

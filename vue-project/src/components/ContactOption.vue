@@ -39,7 +39,9 @@ export default {
   },
   watch: {
     selected(newVal, oldVal) {
-      console.log(newVal, oldVal);
+      console.log(
+        `Jag vill kontakta Jenny via ${newVal}, inte ${oldVal} just idag.`
+      );
     },
   },
 };

@@ -3,35 +3,38 @@
     "id": "10",
     "category": "edu",
     "exp": "Frontend-utvecklare",
-    "place": "IT-Högskolan, Stockholm",
-    "year": "2022-2024"
+    "place": "IT-Högskolan",
+    "year": "2022-2024",
+    "more": "Det här var svårt men kul."
   },
   {
     "id": "9",
     "category": "work",
     "exp": "Skolbibliotek",
-    "place": "Årstadalsskolan, Stockholms stad",
-    "year": "2022-2023"
+    "place": "Årstadalsskolan",
+    "year": "2022-2023",
+    "more": "Jobbat lite extra på sidan av studierna."
   },
   {
     "id": "8",
     "category": "work",
     "exp": "Lärare, årskurs F-6",
-    "place": "Årstadalsskolan, Stockholms stad",
-    "year": "2016-2022"
+    "place": "Årstadalsskolan",
+    "year": "2016-2022",
+    "more": "Lärare i alla teoretiska ämnen."
   },
   {
     "id": "7",
     "category": "work",
     "exp": "Lärare, årskurs F-3",
-    "place": "Källbrinksskolan, Huddinge kommun",
+    "place": "Källbrinksskolan",
     "year": "2012-2016"
   },
   {
     "id": "6",
     "category": "work",
     "exp": "Förskollärare",
-    "place": "Kajen, Stockholms stad",
+    "place": "Kajen",
     "year": "2011-2012"
   },
   {

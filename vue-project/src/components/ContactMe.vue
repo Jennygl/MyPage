@@ -16,7 +16,7 @@ import SubmitButton from "./SubmitButton.vue";
     </div>
     <!-- Jag behövde peppa mig själv lite :) -->
     <div id="grid4">
-      <p>Tell pontential employers how amazing Jenny is.!</p>
+      <p>Tell pontential employers how amazing Jenny is!</p>
       <p>Your name</p>
       <input type="text" label="Your email" v-model="newName" />
       <p>Your message</p>

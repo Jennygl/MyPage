@@ -1,9 +1,8 @@
 <!-- Bootstrap code slide -->
 
 <template>
-
   <div class="grid-container-code">
-    <div class="grid1"><h2>Code</h2></div>
+    <div class="grid1"><h2 class="page-title">Code</h2></div>
 
     <div class="grid2">
       <div
@@ -65,6 +64,22 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
+      <div id="vote">
+        <p>Hur otrolig kod?</p>
+        <input
+          type="button"
+          @click="$store.commit('increase')"
+          class="countButton"
+          value="+"
+        />
+        <p>{{ $store.state.count }}</p>
+        <input
+          type="button"
+          @click="$store.commit('decrease')"
+          class="countButton"
+          value="-"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -73,6 +88,7 @@
 .grid-container-code {
   display: grid;
   grid-template-rows: 25vh auto;
+  grid-template-columns: 40vw;
   grid-template-areas:
     "grid1"
     "grid2";
@@ -86,6 +102,27 @@
   display: grid;
   grid-area: grid2;
 }
+
+.page-title {
+  font-size: 4em;
+}
+
+.countButton {
+  width: 2vw;
+}
+#vote {
+  border: solid 1px black;
+  width: fit-content;
+  padding: 1vw;
+  margin: 2vw;
+  text-align: center;
+}
 </style>
 
-<script></script>
+<script>
+export default {
+  data() {
+    return { count: 0 };
+  },
+};
+</script>
