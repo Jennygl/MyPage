@@ -11,6 +11,5 @@ const mutations = {
   state = {
     count: 0,
   };
-  
 
 export default createStore({ mutations, state, strict: true });
