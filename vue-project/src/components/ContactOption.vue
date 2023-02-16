@@ -28,11 +28,6 @@ export default {
       selected: "",
       options: [
         { text: "Call me", value: "0768535812" },
-        {
-          text: "Visit me on LinkedIn",
-          value:
-            "window.location.href = https://www.linkedin.com/in/jenny-grinde-lensing-243ba7231/",
-        },
         { text: "Use the awesome form", value: "Form over there ->" },
       ],
     };
