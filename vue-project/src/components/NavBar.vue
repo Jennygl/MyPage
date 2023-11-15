@@ -3,30 +3,40 @@ import { RouterLink } from "vue-router";
 </script>
 
 <template>
-  <diV class="greetings">
+  <div class="greetings">
     <header>
       <div class="about">
-        <h1 id="h-jenny">Jenny</h1>
-        <h3>Lärare som skolar om sig till frontend-utvecklare</h3>
+        <!-- <h1 id="h-jenny">
+          Jenny
+          <span id="role">Frontendutvecklare</span>
+        </h1> -->
+        <img src="../assets/Jenny.png" class="Jennyimg" />
       </div>
       <nav class="right">
         <ul>
           <li>
             <h2>
               <RouterLink to="/experience" @click="scrollToTitle"
-                >Experience</RouterLink
+                >Erfarenhet</RouterLink
               >
             </h2>
           </li>
           <li>
             <h2>
-              <RouterLink to="/about" @click="scrollToTitle">About</RouterLink>
+              <RouterLink to="/portfolio" @click="scrollToTitle"
+                >Portfolio</RouterLink
+              >
+            </h2>
+          </li>
+          <li>
+            <h2>
+              <RouterLink to="/about" @click="scrollToTitle">Om mig</RouterLink>
             </h2>
           </li>
           <li>
             <h2>
               <RouterLink to="/contact" @click="scrollToTitle"
-                >Contact</RouterLink
+                >Kontakt</RouterLink
               >
             </h2>
           </li>
@@ -34,67 +44,121 @@ import { RouterLink } from "vue-router";
       </nav>
       <div ref="scrollToHere"></div>
     </header>
-  </diV>
+  </div>
 </template>
 
 <style scoped>
-/* .greetings {
-  display: flex;
-  justify-content: flex-start;
-  width: 100vw;
-  top: 0px;
-} */
+.greetings {
+  width: 100%;
+}
+@media (max-width: 992px) {
+  .greetings {
+    width: 100%;
+  }
+}
 header {
   display: flex;
-  width: 100vw;
-  justify-content: flex-start;
-  align-items: center;
-  height: fit-content;
+  flex-direction: row;
   min-height: 90vh;
-  top: 0%;
-  background-color: rgb(231, 221, 249);
+  max-height: 100vh;
+  overflow-x: hidden;
+  @media (max-width: 992px) {
+    flex-direction: column;
+    width: 100vw;
+  }
+}
+.name {
+  display: flex;
+  flex-direction: column;
 }
 #h-jenny {
   color: black;
   font-weight: 300;
-  font-size: 3em;
-  top: -10px;
+  font-size: 5em;
+  font-family: "Poiret One";
+  position: absolute;
+  @media (max-width: 992px) {
+    font-size: 4em;
+  }
+}
+#role {
+  /* margin: 0 0 -55px 55px; */
+  font-size: 0.3em;
+  position: relative;
+  bottom: 50px;
+  right: 180px;
+  @media (max-width: 992px) {
+    font-size: 0.4em;
+    bottom: 120px;
+    right: -35px;
+  }
+}
+.Jennyimg {
+  width: 20vw;
+  @media (max-width: 992px) {
+    width: 35vw;
+  }
+}
+.h-gl {
+  display: flex;
+  flex-direction: row;
+  margin: 0 0 0 8px;
+  padding-top: 10px;
 }
 
 .about {
-  justify-content: center;
+  display: flex;
+  /* justify-content: flex-start; */
+  flex-direction: column;
+  align-self: center;
+  margin-left: 2em;
   text-align: left;
-  width: 50vw;
-  left: 6vw;
-  top: 30vh;
-  padding-left: 2vw;
+  padding-bottom: 5em;
+  /* width: 30vw; */
+  @media (max-width: 992px) {
+    align-self: flex-start;
+    margin-top: 10vh;
+  }
 }
 
 h3 {
-  font-size: 1em;
+  font-size: 1.5em;
+  font-family: "Poiret One";
 }
 
-.jImg {
+/* .jImg {
   border-radius: 50%;
   left: 35px;
-}
+} */
 
 ul {
   list-style-type: none;
   color: grey;
-  position: relative;
-  padding-top: 6vh;
-  padding-bottom: 6vh;
+  max-height: 100%;
+  /* position: relative; */
 }
 
 .right {
+  padding-top: 6vh;
+  padding-bottom: 6vh;
+  padding-right: 2vw;
+  margin-left: auto;
+  margin-right: 2vw;
   justify-content: flex-end;
+  text-align: end;
+  display: flex;
+  max-height: 100vh;
+  /* overflow-x: hidden; */
 }
 
 a:link {
   text-decoration: none;
   color: rgb(40, 40, 40);
-  font-size: 4em;
+  font-size: 15vh;
+  font-family: "Cabin Sketch", cursive;
+  @media (max-width: 992px) {
+    font-size: 10vw;
+  }
 }
 a:visited {
   text-decoration: none;
@@ -113,12 +177,12 @@ a:active {
   text-align: left;
 }
 
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
   .greetings h1,
   .greetings h3 {
     text-align: left;
   }
-}
+} */
 </style>
 <script>
 export default {
@@ -131,7 +195,7 @@ export default {
   methods: {
     scrollToTitle() {
       window.scrollTo({
-        top: 300,
+        top: 400,
         behavior: "smooth",
       });
       //   this.$refs["scrollToHere"].scrollIntoView({ behavior: "smooth" });

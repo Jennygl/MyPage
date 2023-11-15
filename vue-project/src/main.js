@@ -6,6 +6,8 @@ import "bootstrap/dist/css/bootstrap.css";
 import AlertIcon from "vue-ionicons/dist/ios-alert.vue";
 import Vuex from "vuex";
 import store from "./store";
+import { ref } from "vue";
+import { Modal } from "usemodal-vue3";
 
 {
   AlertIcon;

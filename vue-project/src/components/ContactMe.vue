@@ -1,114 +1,37 @@
-<script setup>
-import ContactOption from "./ContactOption.vue";
-import SubmitButton from "./SubmitButton.vue";
-</script>
-
+<!-- eslint-disable prettier/prettier -->
 <template>
-  <div id="grid-container-contact">
-    <div id="gridHeader">
-      <h2 class="page-title">Contact</h2>
-    </div>
-
-    <div id="gridEmpty"></div>
-
-    <div id="gridContact">
-      <ContactOption></ContactOption>
-    </div>
-    <!-- Jag behövde peppa mig själv lite :) -->
-    <div id="grid4">
-      <p>Tell pontential employers how amazing Jenny is!</p>
-      <p>Your name</p>
-      <input type="text" label="Your email" v-model="newName" />
-      <p>Your message</p>
-      <textarea v-model="newAwesome" rows="7" cols="72">hej</textarea>
-
-      <SubmitButton
-        @thank-you="feedbackSent"
-        class="sendButton"
-        @click="soAwesome"
-        type="button"
-        value="Tell them"
-      ></SubmitButton>
-      <p>Here it is:</p>
-
-      <p>
-        <span>{{ initials }} says: </span>{{ awesome }}
-      </p>
+  <div>
+    <h2 class="page-title">Kontakt</h2>
+    <div class="Portfolio-container">
+      <!-- <div class="PortGrid"> -->
+      <h4>Email: jennygrinde@gmail.com</h4>
+      <ion-icon name="logo-linkedin" type="button" class="logo"></ion-icon>
+      <!-- </div> -->
     </div>
   </div>
 </template>
 
 <style>
-/* @media (min-width: 1024px) { */
-#grid-container-contact {
+.Portfolio-container {
   display: grid;
-  padding-left: 2vw;
-  grid-template-rows: 25vh auto;
-  grid-template-columns: 40vw 40vw;
-  grid-template-areas:
-    "grid1 grid2"
-    "grid3 grid4";
+  justify-content: start;
+  grid-template-columns: auto;
+  padding: 10px;
+  margin: 1vh 0 14vh 1vw;
+}
+.PortGrid {
+  display: grid;
+  box-shadow: 5px 5px 10px rgb(241, 230, 236), -5px -5px 10px rgb(240, 174, 209);
+  border-radius: 5px 5px;
+  padding: 1em;
+  margin: 2em;
 }
 
-#gridHeader {
-  display: grid;
-  grid-area: grid1;
-}
-#gridEmpty {
-  display: grid;
-  grid-area: grid2;
-}
-
-#gridContact {
-  display: grid;
-  grid-area: grid3;
-}
-#gridForm {
-  display: grid;
-  grid-area: grid4;
-}
-
-ul {
-  list-style: none;
+.logo {
+  font-size: 3em;
+  margin: 1vh 0 2vh 1vw;
 }
 </style>
 
-<script>
-export default {
-  computed: {
-    initials() {
-      return this.newName
-        .split(" ")
-        .map((newName) => newName.charAt(0))
-        .join(".");
-    },
-  },
-  data() {
-    return {
-      awesome: null,
-      emptyName: null,
-      newAwesome: "",
-      name: "",
-      newName: "",
-    };
-  },
-  //   watch: {
-  //     name(name) {
-  //       if (name.includes("")) {
-  //         this.soAwesome();
-  //       }
-  //     },
-  //   },
-
-  methods: {
-    soAwesome() {
-      `${this.newName}`, (this.awesome = `${this.newAwesome}`);
-    },
-
-    feedbackSent() {
-      console.log("Feedback har skickats.");
-    },
-  },
-  components: { SubmitButton },
-};
-</script>
+//
+<script></script>

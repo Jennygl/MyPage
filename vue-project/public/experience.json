@@ -5,15 +5,14 @@
     "exp": "Frontend-utvecklare",
     "place": "IT-Högskolan",
     "year": "2022-2024",
-    "more": "Det här var svårt men kul."
+    "more": "Genomgångna kurser: \nHTML & CSS  \nNative Javascript \nUX- & UI-design \nJavascript med ramverk \nAgil utveckling \nFullstackutveckling "
   },
   {
     "id": "9",
     "category": "work",
     "exp": "Skolbibliotek",
     "place": "Årstadalsskolan",
-    "year": "2022-2023",
-    "more": "Jobbat lite extra på sidan av studierna."
+    "year": "2022-2023"
   },
   {
     "id": "8",
@@ -50,26 +49,5 @@
     "exp": "Pedagogik, kurs",
     "place": "Linköpings universitet",
     "year": "2007"
-  },
-  {
-    "id": "3",
-    "category": "edu",
-    "exp": "Juridisk översiktskurs",
-    "place": "Stockholms universitet",
-    "year": "2006"
-  },
-  {
-    "id": "2",
-    "category": "work",
-    "exp": "Lagerarbete",
-    "place": "ICA Flygfyren",
-    "year": "2006"
-  },
-  {
-    "id": "1",
-    "category": "edu",
-    "exp": "Media: grafisk kommunikation",
-    "place": "NTI-gymnasiet",
-    "year": "2003-2006"
   }
 ]

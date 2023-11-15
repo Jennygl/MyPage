@@ -6,12 +6,14 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+    "start": "run dev"
   },
   "dependencies": {
     "@popperjs/core": "^2.11.6",
     "bootstrap": "^5.2.3",
     "lint": "^0.8.19",
+    "usemodal-vue3": "^0.3.7",
     "vue": "^3.2.45",
     "vue-ionicons": "^3.0.5",
     "vue-router": "^4.1.6",

@@ -1,36 +1,26 @@
 <template>
+  <h2 class="page-title">Erfarenhet</h2>
   <div id="grid-container">
-    <div id="grid1">
-      <h2 class="page-title">Experience</h2>
-    </div>
-
-    <div id="grid2"></div>
+    <!-- <div id="grid2"></div> -->
     <!-- Använder resultat från axios -->
     <div id="grid3">
+      <div class="verticalline"></div>
+
       <ul v-for="experience in experiences" :key="experience.id">
-        <li>
-          <h3>{{ experience.exp }}</h3>
-          <button v-on:click="show = !show" value="experience.id">
-            <ion-icon
-              name="chevron-down-outline"
-              id="moreInfo"
-              alt="more info"
-            ></ion-icon>
-          </button>
-          <transition name="fade">
-            <span v-if="show">
-              {{ experience.place }}
-              , {{ experience.year }}
-            </span></transition
-          >
-        </li>
+        <div class="exp-box">
+          <li>
+            <div class="circle"></div>
+            <h3 class="exptitle">{{ experience.exp }}</h3>
+            <p>{{ experience.place }}, {{ experience.year }}</p>
+            <p style="white-space: pre">{{ experience.more }}</p>
+          </li>
+        </div>
       </ul>
     </div>
 
-    <div id="grid4">
-      <ul id="courses">
+    <!-- <div id="grid4"> -->
+    <!-- <ul id="courses">
         <li>
-          <!-- Adressparameter -->
           <router-link to="/exp/Courses"
             ><h3>
               Innan min LIA börjar kommer jag att ha genomfört följande kurser:
@@ -51,8 +41,8 @@
           </RouterLink>
         </li>
         <li></li>
-      </ul>
-    </div>
+      </ul> -->
+    <!-- </div> -->
   </div>
 
   <router-view></router-view>
@@ -60,22 +50,19 @@
 
 <style>
 body {
-  background-color: rgb(231, 221, 249);
+  background-color: var(--bg-color);
 }
 /* @media (min-width: 1024px) { */
 #grid-container {
   display: grid;
   padding-left: 2vw;
-  grid-template-rows: 25vh auto auto;
-  grid-template-columns: 40vw 30vw;
+  /* grid-template-rows: 25vh auto auto; */
+  grid-template-columns: 40vw;
   grid-template-areas:
-    "grid1 grid2"
-    "grid3 grid4";
+    "grid1"
+    "grid3";
 }
 
-.page-title {
-  font-size: 4em;
-}
 @media (max-width: 900px) {
   #grid-container {
     display: grid;
@@ -83,8 +70,7 @@ body {
     grid-template-columns: 80vw;
     grid-template-areas:
       "grid1"
-      "grid3"
-      "grid4";
+      "grid3";
   }
 }
 
@@ -101,6 +87,32 @@ body {
   display: grid;
   grid-area: grid3;
 }
+
+/* Timleline */
+.verticalline {
+  border-left: 1px solid rgb(174, 219, 240);
+  height: 2200px;
+  width: 10px;
+  position: absolute;
+  left: 25px;
+}
+
+.circle {
+  height: 25px;
+  width: 25px;
+  border: 1px solid white;
+  background-color: rgb(174, 219, 240);
+  border-radius: 50%;
+  position: absolute;
+  left: 13px;
+}
+.exp-box {
+  box-shadow: 5px 5px 10px rgb(174, 219, 240), -1px -1px 10px rgb(174, 219, 240);
+  border-radius: 5px 30px 30px 5px;
+  padding: 2em;
+  margin: 1em;
+}
+
 #grid4 {
   display: grid;
   grid-area: grid4;
